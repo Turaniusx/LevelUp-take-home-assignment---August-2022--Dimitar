@@ -1,5 +1,5 @@
 <?php  
-    include_once 'server.php';
+    include 'server.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Validation</title>
     <link rel="stylesheet" type="text/css" href="styles/cssStyles.css">
-    
 </head>
 <body>
     <div class="purchase-form">
@@ -32,7 +31,7 @@
                 
                 <div class="formGroup">
                     <p class="cardNumberP">Card Number</p>
-                    <input type="text" name="numberEntered" class="cardNumberInput">
+                    <input type="text" minlength="14" maxlength="16" name="numberEntered" class="cardNumberInput">
                     
                     
                 </div>
@@ -87,10 +86,10 @@
                      if (validateNumber($number_entered) !== false){
                         echo "<p><green> $type detected, Credit card number is valid!</green></p>";
                     }else {
-                        echo  "<p><red>Invalid card number!</red></p>";
+                        echo  "<p>Invalid card number!\t</p>";
                     }
                     if (empty($number_entered)){
-                        echo "<p><red>Fill in the form</red></p>";
+                        echo "<p>\tFill in the form</p>";
                     }
                 }
                 
