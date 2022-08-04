@@ -1,0 +1,196 @@
+body {
+    background-color: rgb(49, 55, 70);
+    font-family: Roboto Flex, Arial;
+    color: rgb(255, 255, 255);
+}
+
+.paymentForm {
+   max-width: 800px;
+   display: block;
+   margin: 8vh auto 0 auto;
+  
+   border-width: 1px;
+   color: white;
+   position: relative;
+   
+}
+
+.h1 {
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+    justify-content: center;
+    
+}
+.innerForm {
+    width: 450px;
+    display: block;
+    
+    
+    margin: 8vh auto 0 auto;;
+    height: 500px;
+    margin-top: 0px;
+
+}
+.nameP {
+    position: absolute;
+    left: 215px;
+    top: 100px;
+}
+.ownerNameInput {
+    position: absolute;
+    top: 150px;
+    color: black;
+    padding-left: 8px;
+    border: none;
+    font-size: 18px;
+    left: 215px;
+    width: 355px;
+    height: 35px;
+    transition: box-shadow 0.1s, border 0.1s, padding 0.2s;
+}
+.ownerNameInput:hover {
+    box-shadow: 0 0 12px rgb(150, 184, 214);
+    border: none;
+    
+}
+.cardNumberInput {
+    position: absolute;
+    top: 250px;
+    color: black;
+    padding-left: 8px;
+    font-size: 18px;
+    border: none;
+    left: 215px;
+    width: 250px;
+    height: 35px;
+    transition: box-shadow 0.1s, border 0.1s, padding 0.2s;
+}
+.cardNumberInput:hover {
+    box-shadow: 0 0 12px rgb(150, 184, 214);
+    border: none;
+    
+}
+.cardNumberP {
+    position: absolute;
+    left: 215px;
+    top: 200px;
+}
+.cvvP {
+    position: absolute;
+    
+    top: 200px;
+    left: 500px;
+}
+.cvvInput {
+    color: black;
+    
+    position: absolute;
+    top: 250px;
+    left: 501px;
+    height: 35px;
+    width: 75px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    transition: box-shadow 0.1s, border 0.1s, padding 0.2s;
+}
+.cvvInput:hover {
+    box-shadow: 0 0 12px rgb(150, 184, 214);
+    border: none;
+   
+    
+}
+.expDateP {
+    position: absolute;
+    top: 300px;
+    left: 215px;
+    height: 35px;
+    
+}
+.monthSelector {
+    position: absolute;
+    top: 350px;
+    color: black;
+    font-size: 16px;
+    left: 215px;
+    width: 110px;
+    height: 35px;
+    transition: box-shadow 0.1s, border 0.1s;
+    cursor: pointer;
+}
+.monthSelector:hover {
+    box-shadow: 0 0 12px rgb(150, 184, 214);
+    border: none;
+    
+}
+.yearSelector {
+    position: absolute;
+    top: 350px;
+    color: black;
+    padding-left: 5px;
+    font-size: 16px;
+    left: 345px;
+    width: 70px;
+    height: 35px;
+    transition: box-shadow 0.1s, border 0.1s;
+    cursor: pointer;
+}
+.yearSelector:hover {
+    box-shadow: 0 0 12px rgb(150, 184, 214);
+    border: none;
+    
+}
+option {
+    color: rgb(255, 255, 255);
+    background-color: rgb(49, 55, 70);
+}
+.amex {
+    width: 50px;
+    position: absolute;
+    left: 530px;
+    top: 350px;
+}
+.confirmButton {
+    color: white;
+    position: absolute;
+    left: 212px;
+    top: 430px;
+    width: 370px;
+    height: 50px;
+    background-color: rgb(49, 55, 70);
+    border-color: rgb(115, 221, 115);
+    border-style: solid;
+    box-shadow: 0 0 4px rgb(115, 221, 115);
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.1s, color 0.1s;
+    cursor: pointer;
+}
+.confirmButton:hover {
+    background-color: rgb(115, 221, 115);
+    color: rgb(49, 55, 70);
+    box-shadow: 0 0 16px rgb(115, 221, 115);
+    
+}
+.example_cards {
+    width: 800px;
+    display: flex;
+    margin: 8vh auto 0 auto;
+    justify-content: center;
+    position: relative;
+    
+}
+.table {
+    text-align: left;
+    position: absolute;
+    left: 180px;
+    width: 550px;
+}
+.detector {
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+    justify-content: center;
+    
+}
