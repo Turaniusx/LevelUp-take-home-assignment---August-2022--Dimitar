@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Validation</title>
-    <link rel="stylesheet" type="text/css" href="styles/cssStyles.css">
+    <link rel="stylesheet" href="styles/Styles.css">
 </head>
 <body>
     <div class="purchase-form">
@@ -26,46 +26,29 @@
             <form method="post" action="index.php">
                 <div class="formGroup">
                     <p class="nameP">Name</p>
-                    <input type="text" name="ownerNameInput" class="ownerNameInput" placeholder="Full Name..">
+                    <input type="text" name="ownerNameInput" class="ownerNameInput" placeholder="e.g. John/Jane Doe">
                 </div>
                 
                 <div class="formGroup">
                     <p class="cardNumberP">Card Number</p>
-                    <input type="text" minlength="14" maxlength="16" name="numberEntered" class="cardNumberInput">
+                    <input type="text" minlength="14" maxlength="16" name="numberEntered" class="cardNumberInput"
+                    placeholder="e.g. 1234 5678 9123 0000">
                     
                     
                 </div>
                 <div class="formGroup">
                     <p class="cvvP">CVV</p>
-                    <input type="text" name="cvvInput" max="4" min="1" maxlength="4" id="cvv" class="cvvInput">
+                    <input type="text" name="cvvInput" max="4" min="1" maxlength="4" id="cvv" class="cvvInput" placeholder="e.g. 123">
                 </div>
-            <div class="formGroup" id="expirationDate">
+                <div class="formGroup" id="expirationDate">
                 <p class="expDateP">Expiration Date</p>
-                <select name="months" id="selectMonth" class="monthSelector">
-                    <option value="01">January</option>
-                    <option value="02">February </option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <select name="years" id="selectYear" class="yearSelector">
-                    <option value="23"> 2023</option>
-                    <option value="24"> 2024</option>
-                    <option value="25"> 2025</option>
-                    <option value="26"> 2026</option>
-                    <option value="27"> 2027</option>
-                    <option value="28"> 2028</option>
-                </select>
+                <input type="text" maxlength="5" class="dateSelector" name="expDate" placeholder="e.g. 12/12">
                 
-            </div>
+                
+                </div>
             <div class="formGroup" id="creditCards">
+                <img src="images/visa-logo.png" alt="visa" class="visa">
+                <img src="images/MasterCard-Logo1.png" alt="mastercard" class="mastercard">
                 <img src="images/amex_card.jpg" alt="amex" class="amex">
             </div>
             <div class="formGroup">
@@ -84,14 +67,26 @@
             <?php 
                 if (isset($_POST['confirmButton'])){
                      if (validateNumber($number_entered) !== false){
-                        echo "<p><green> $type detected, Credit card number is valid!</green></p>";
+                        echo "<p>$type detected, Credit card number is valid!</p>";
+                        
                     }else {
                         echo  "<p>Invalid card number!\t</p>";
+                        
                     }
-                    if (empty($number_entered)){
-                        echo "<p>\tFill in the form</p>";
+                    if (empty($number_entered && $expDate)){
+                        echo " ". "<p>/Fill in the form</p>";
                     }
+                    if (validateDate($expDate) !== false) {
+                        echo "<p>$expired</p>";
+                    } else {
+                        echo "<p>$notExpired</p>";
+                    }
+                    
+                   
+                    
                 }
+        
+                
                 
             ?>
             </div>
@@ -99,9 +94,10 @@
     </div>
                      
     <br><br>
-    <p style="text-align: center;">Example cards:</p>
+    
     <div class="example_cards">
-        <table class="table">
+    <p style="text-align: center;">Example cards:</p>
+        <table class="table"> 
             <thead class="thread">
                 <tr>
                     <th>Type</th>

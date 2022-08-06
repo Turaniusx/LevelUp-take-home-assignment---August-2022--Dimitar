@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(49, 55, 70);
+    background: linear-gradient(to right bottom, #1e222e, #5d7cc9);
     font-family: Roboto Flex, Arial;
     color: rgb(255, 255, 255);
 }
@@ -108,20 +108,22 @@ body {
     height: 35px;
     
 }
-.monthSelector {
+.dateSelector {
     position: absolute;
+    border: none;
+    padding-left: 8px;
     top: 350px;
     color: black;
-    font-size: 16px;
+    font-size: 20px;
     left: 215px;
     width: 110px;
     height: 35px;
-    transition: box-shadow 0.1s, border 0.1s;
-    cursor: pointer;
+    transition: box-shadow 0.1s;
+    
 }
-.monthSelector:hover {
+.dateSelector:hover {
     box-shadow: 0 0 12px rgb(150, 184, 214);
-    border: none;
+    
     
 }
 .yearSelector {
@@ -151,6 +153,23 @@ option {
     left: 530px;
     top: 350px;
 }
+.mastercard {
+    width: 50px;
+    height: 37px;
+    position: absolute;
+    left: 470px;
+    top: 350px;
+}
+.visa {
+    
+    width: 50px;
+    height: 37.5px;
+    position: absolute;
+    left: 409px;
+    top: 350px;
+    
+}
+
 .confirmButton {
     color: white;
     position: absolute;
@@ -158,24 +177,26 @@ option {
     top: 430px;
     width: 370px;
     height: 50px;
-    background-color: rgb(49, 55, 70);
+    background: linear-gradient(to right bottom, #0a0d10, #5d7cc9);
     border-color: rgb(115, 221, 115);
     border-style: solid;
     box-shadow: 0 0 4px rgb(115, 221, 115);
     border-radius: 5px;
     font-size: 20px;
-    transition: background-color 0.1s, color 0.1s;
+    font-weight: bold;
     cursor: pointer;
 }
 .confirmButton:hover {
-    background-color: rgb(115, 221, 115);
-    color: rgb(49, 55, 70);
+    
+    background: linear-gradient(to right top, #067e0a, #7be47d);
+    color: white;
     box-shadow: 0 0 16px rgb(115, 221, 115);
     
 }
 .example_cards {
     width: 800px;
-    display: flex;
+    display: block;
+    
     margin: 8vh auto 0 auto;
     justify-content: center;
     position: relative;
