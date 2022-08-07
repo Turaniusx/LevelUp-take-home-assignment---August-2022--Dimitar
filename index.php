@@ -26,23 +26,23 @@
             <form method="post" action="index.php">
                 <div class="formGroup">
                     <p class="nameP">Name</p>
-                    <input type="text" name="ownerNameInput" class="ownerNameInput" placeholder="e.g. John/Jane Doe">
+                    <input type="text" name="ownerNameInput" class="ownerNameInput" placeholder="e.g. John/Jane Doe" required>
                 </div>
                 
                 <div class="formGroup">
                     <p class="cardNumberP">Card Number</p>
                     <input type="text" minlength="14" maxlength="16" name="numberEntered" class="cardNumberInput"
-                    placeholder="e.g. 1234 5678 9123 0000" id="cardNumber-el">
+                    placeholder="e.g. 1234 5678 9123 0000" id="cardNumber-el" required>
                     
                     
                 </div>
                 <div class="formGroup">
                     <p class="cvvP">CVV</p>
-                    <input type="text" name="cvvInput" max="4" min="1" maxlength="4" id="cvv" class="cvvInput" placeholder="e.g. 123">
+                    <input type="text" name="cvvEntered" max="4" min="1" maxlength="4" id="cvv" class="cvvInput" placeholder="e.g. 123" required>
                 </div>
                 <div class="formGroup" id="expirationDate">
                 <p class="expDateP">Expiration Date</p>
-                <input type="text" maxlength="5" class="dateSelector" name="expDate" placeholder="MM/YY">
+                <input type="text" maxlength="5" class="dateSelector" name="expDate" placeholder="MM/YY" required>
                 
                 
                 </div>
@@ -66,16 +66,14 @@
             <div class="detector">
             <?php 
                 if (isset($_POST['confirmButton'])){
-                     if (validateNumber($number_entered) !== false){
-                        echo "<p>$type detected, Credit card number is valid!</p>";
+                     if (validateCard($number_entered, $cvv_entered) !== false){
+                        echo '<p style="color: #3ef238; font-weight: bold;">' . $typeOfCard . 'detected, Credit Card is valid!</p>';
                         
                     }else {
-                        echo  "<p>Invalid card number!\t</p>";
+                        echo  '<p style="color: #fc250d; font-weight: bold;"><u>Invalid Card Number or CVV</u></p>';
                         
                     }
-                    if (empty($number_entered && $expDate)){
-                        echo " ". "<p>/Fill in the form</p>";
-                    }
+                    
                     if (validateDate($expDate) !== false) {
                         echo "<p>$expired</p>";
                     } else {

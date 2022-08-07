@@ -188,12 +188,25 @@ option {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    
 }
 .confirmButton:hover {
     
     background: linear-gradient(to right top, #067e0a, #7be47d);
     color: white;
-    box-shadow: 0 0 16px rgb(115, 221, 115);
+    box-shadow: 0 0 6px rgb(115, 221, 115);
+    font-size: 22px;
+    transition: font-size 0.04s;
+    
+}
+.confirmButton:active {
+    background: linear-gradient(to left top, #09be0f, #70f472);
+    font-size: 24px;
+    box-shadow: 0 0 6px 2px rgb(115, 221, 115);
+    
+
+
+
     
 }
 .example_cards {
