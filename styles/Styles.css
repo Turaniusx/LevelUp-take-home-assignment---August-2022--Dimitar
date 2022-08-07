@@ -201,7 +201,7 @@ option {
 }
 .confirmButton:active {
     background: linear-gradient(to left top, #09be0f, #70f472);
-    font-size: 24px;
+    font-size: 22px;
     box-shadow: 0 0 6px 2px rgb(115, 221, 115);
     
 
@@ -231,3 +231,4 @@ option {
     justify-content: center;
     
 }
+
