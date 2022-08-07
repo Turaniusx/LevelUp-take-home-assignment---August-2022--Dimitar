@@ -2,6 +2,9 @@ body {
     background: linear-gradient(to right bottom, #1e222e, #5d7cc9);
     font-family: Roboto Flex, Arial;
     color: rgb(255, 255, 255);
+    background-size: cover;
+    height: 780px;
+    align-self: auto;
 }
 
 .paymentForm {
