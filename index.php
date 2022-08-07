@@ -32,7 +32,7 @@
                 <div class="formGroup">
                     <p class="cardNumberP">Card Number</p>
                     <input type="text" minlength="14" maxlength="16" name="numberEntered" class="cardNumberInput"
-                    placeholder="e.g. 1234 5678 9123 0000">
+                    placeholder="e.g. 1234 5678 9123 0000" id="cardNumber-el">
                     
                     
                 </div>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="formGroup" id="expirationDate">
                 <p class="expDateP">Expiration Date</p>
-                <input type="text" maxlength="5" class="dateSelector" name="expDate" placeholder="e.g. 12/12">
+                <input type="text" maxlength="5" class="dateSelector" name="expDate" placeholder="MM/YY">
                 
                 
                 </div>
