@@ -67,7 +67,7 @@
             <?php 
                 if (isset($_POST['confirmButton'])){
                      if (validateCard($number_entered, $cvv_entered) !== false){
-                        echo '<p style="color: #3ef238; font-weight: bold;">' . $typeOfCard . 'detected, Credit Card is valid!</p>';
+                        echo '<p style="color: #3ef238; font-weight: bold;">' . $typeOfCard . ' detected, Credit Card is valid!</p>';
                         
                     }else {
                         echo  '<p style="color: #fc250d; font-weight: bold;"><u>Invalid Card Number or CVV</u></p>';
