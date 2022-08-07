@@ -93,37 +93,7 @@
                      
     </div>
                      
-    <br><br>
     
-    <div class="example_cards">
-    <p style="text-align: center;">Example cards:</p>
-        <table class="table"> 
-            <thead class="thread">
-                <tr>
-                    <th>Type</th>
-                    <th>CVV</th>
-                    <th>Card Number</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="trs">
-                    <td>Visa</td>
-                    <td>172</td>
-                    <td>4790 1245 6612 0712</td>
-                </tr>
-                <tr>
-                    <td>Master Card</td>
-                    <td>045</td>
-                    <td>5780 0571 5811 6632</td>
-                </tr>
-                <tr>
-                    <td>American Express</td>
-                    <td>3489</td>
-                    <td>3451 832066 30356</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     <script src="jscript.js">
 
     </script>
