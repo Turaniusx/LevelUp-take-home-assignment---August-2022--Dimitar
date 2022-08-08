@@ -22,7 +22,7 @@ function ccValidation(){
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.onreadystatechange = function() {
         if (request.readyState == 4 && request.status == 200){
-            var return_data = request.responseText;
+            var return_data = JSON.parse(request.responseText);
             document.getElementById('validate').textContent = return_data;
         }
     }
