@@ -31,7 +31,7 @@
                 
                 <div class="formGroup">
                     <p class="cardNumberP" id="validate">Card Number </p>
-                    <input type="text" minlength="14" maxlength="16" onblur="ccValidation()" name="numberEntered" class="cardNumberInput"
+                    <input type="text" minlength="14" maxlength="16" onsubmit="ccValidation()" name="numberEntered" class="cardNumberInput"
                     placeholder="e.g. 1234 5678 9123 0000" id="numberEntered-el" required >
                     
                     
@@ -78,11 +78,7 @@
                     if (validateDate($expDate) !== false) {
                         echo '<p style="color: #fc250d; font-weight: bold;">' . $expired . '</p>';
                        
-                    } else {
-                        echo '<p style="color: #3ef238; font-weight: bold;">' . $notExpired . '</p>';
-                        
-                    }
-                    
+                    } 
                    
                     
                 }
