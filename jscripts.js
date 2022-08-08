@@ -21,8 +21,8 @@ function ccValidation(){
     request.open("POST", url, true);
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.onreadystatechange = function() {
-        if (request.readyState == 4 && request.status == 200){
-            var return_data = JSON.parse(request.responseText);
+        if (this.readyState == 4 && this.status == 200){
+            var return_data = JSON.parse(this.responseText);
             document.getElementById('validate').textContent = return_data;
         }
     }
