@@ -13,7 +13,7 @@ function ccValidation(){
             }
         }
     }
-    var url = "index.php";
+    var url = "server.php";
     var card_entered = document.getElementById('numberEntered-el').value;
     var date_entered = document.getElementById('expDate-el').value;
     var cvv_entered = document.getElementById('cvv-el').value;
@@ -27,5 +27,4 @@ function ccValidation(){
         }
     }
     request.send(vars);
-
 }

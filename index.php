@@ -30,8 +30,8 @@
                 </div>
                 
                 <div class="formGroup">
-                    <p class="cardNumberP" id="validate">Card Number </p>
-                    <input type="text" minlength="14" maxlength="16" onsubmit="ccValidation()" name="numberEntered" class="cardNumberInput"
+                    <p class="cardNumberP">Card Number </p><label id="validate"></label>
+                    <input type="text" minlength="14" maxlength="16" onblur="ccValidation();" name="numberEntered" class="cardNumberInput"
                     placeholder="e.g. 1234 5678 9123 0000" id="numberEntered-el" required >
                     
                     
@@ -41,7 +41,7 @@
                     <p class="cvvP">CVV</p>
                     <input type="text" name="cvvEntered" max="4" min="1" maxlength="4" id="cvv-el" class="cvvInput" placeholder="e.g. 123" required>
                 </div>
-                <div class="formGroup" id="expirationDate">
+                <div class="formGroup">
                 <p class="expDateP">Expiration Date</p>
                 <input type="text" maxlength="5" class="dateSelector" name="expDate" placeholder="MM/YY" id="expDate-el" required>
                 
