@@ -7,7 +7,7 @@
 
     function validateCard($number_entered, $cvv_entered){
             global $typeOfCard;
-        
+            
         $cvvType = [
             'visa' => "/^[0-9]{3}$/",
             'mastercard' => "/^[0-9]{3}$/",
@@ -28,24 +28,18 @@
             return false;
         }
     }  
-        
     function validateDate($expDate){ 
             global $expired, $notExpired;
             
-        
-            $expDate = DateTime::createFromFormat('m/y', $_POST['expDate']);
-            $currentDate = new DateTime('now');
-            
-            if ($expDate < $currentDate) {
-                $expired = "expired";
-            } else {
-                $notExpired = "not expired";
-            }
-        
+        $expDate = DateTime::createFromFormat('m/y', $_POST['expDate']);
+        $currentDate = new DateTime('now');
+
+        if ($expDate < $currentDate) {
+            $expired = "expired";
+        } else {
+            $notExpired = "not expired";
+        }
     }
-            
-            
-       
     validateCard($number_entered, $cvv_entered);
     validateDate($expDate);
 }
