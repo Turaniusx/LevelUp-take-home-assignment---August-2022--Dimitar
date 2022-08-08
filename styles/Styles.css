@@ -129,23 +129,7 @@ body {
     
     
 }
-.yearSelector {
-    position: absolute;
-    top: 350px;
-    color: black;
-    padding-left: 5px;
-    font-size: 16px;
-    left: 345px;
-    width: 70px;
-    height: 35px;
-    transition: box-shadow 0.1s, border 0.1s;
-    cursor: pointer;
-}
-.yearSelector:hover {
-    box-shadow: 0 0 12px rgb(150, 184, 214);
-    border: none;
-    
-}
+
 option {
     color: rgb(255, 255, 255);
     background-color: rgb(49, 55, 70);

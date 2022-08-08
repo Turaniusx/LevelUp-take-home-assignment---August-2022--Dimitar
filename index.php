@@ -21,7 +21,7 @@
             <div class="innerForm">
                 <div class="h1">
                   <h1>Confirm Purchase</h1>
-                </div>
+                </div> 
                 
             <form method="post" action="index.php">
                 <div class="formGroup">
@@ -32,7 +32,8 @@
                 <div class="formGroup">
                     <p class="cardNumberP">Card Number</p>
                     <input type="text" minlength="14" maxlength="16" name="numberEntered" class="cardNumberInput"
-                    placeholder="e.g. 1234 5678 9123 0000" id="cardNumber-el" required>
+                    placeholder="e.g. 1234 5678 9123 0000"  required>
+                    
                     
                     
                 </div>
@@ -75,9 +76,11 @@
                     }
                     
                     if (validateDate($expDate) !== false) {
-                        echo "<p>$expired</p>";
+                        echo '<p style="color: #fc250d; font-weight: bold;">' . $expired . '</p>';
+                       
                     } else {
-                        echo "<p>$notExpired</p>";
+                        echo '<p style="color: #3ef238; font-weight: bold;">' . $notExpired . '</p>';
+                        
                     }
                     
                    

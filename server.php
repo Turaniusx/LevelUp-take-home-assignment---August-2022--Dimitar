@@ -1,11 +1,12 @@
 <?php 
     if (isset($_POST['confirmButton'])) {
         
+        $expDate = $_POST['expDate'];
         $cvv_entered = $_POST['cvvEntered'];
         $number_entered = $_POST['numberEntered'];
-        function validateCard($number_entered, $cvv_entered){
-        global $typeOfCard, $typeOfCvv;
-        
+
+    function validateCard($number_entered, $cvv_entered){
+            global $typeOfCard;
         
         $cvvType = [
             'visa' => "/^[0-9]{3}$/",
@@ -27,17 +28,24 @@
             return false;
         }
     }  
-        $expDate = $_POST['expDate'];
-        function validateDate($expDate){ //a func to check if user input of date is expired or not
+        
+    function validateDate($expDate){ 
             global $expired, $notExpired;
-            $currentDate = date('m/Y');
-            $currentTime = strtotime($currentDate);
-            if ($currentTime > $expDate) {
+            
+        
+            $expDate = DateTime::createFromFormat('m/y', $_POST['expDate']);
+            $currentDate = new DateTime('now');
+            
+            if ($expDate < $currentDate) {
                 $expired = "expired";
             } else {
                 $notExpired = "not expired";
             }
-       }
+        
+    }
+            
+            
+       
     validateCard($number_entered, $cvv_entered);
     validateDate($expDate);
 }
