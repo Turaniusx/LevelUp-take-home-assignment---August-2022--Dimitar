@@ -48,9 +48,9 @@
                 
                 </div>
             <div class="formGroup" id="creditCards">
-                <img src="images/visa-logo.png" alt="visa" class="visa">
-                <img src="images/mastercard-logo1.png" alt="mastercard" class="mastercard">
-                <img src="images/amex_card.jpg" alt="amex" class="amex">
+                <img src="images/visa_logo.png" alt="visa" class="visa">
+                <img src="images/mastercard_logo.png" alt="mastercard" class="mastercard">
+                <img src="images/amex_logo.jpg" alt="amex" class="amex">
             </div>
             <div class="formGroup">
                 <button type="submit" name="confirmButton" class="confirmButton" id="confirmPurchase">Confirm</button>
