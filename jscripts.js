@@ -28,3 +28,14 @@ function ccValidation(){
     }
     request.send(vars);
 }
+
+// readyState Values
+    // 0: request not initialized
+    // 1: server connection established
+    // 2: request recieved
+    // 3: processing request
+    // 4: request finished and response is ready <- when we use onreadystatechange we wanna make sure we are on 4
+    // HTTP Statuses
+    // 200: "OK"
+    // 403: "FORBIDDEN"
+    // 404: "NOT FOUND"
