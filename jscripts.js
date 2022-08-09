@@ -1,10 +1,11 @@
+var card_entered = document.getElementById('numberEntered-el').value;
+var date_entered = document.getElementById('expDate-el').value;
+var cvv_entered = document.getElementById('cvv-el').value;
 
 function ccValidation(){
-
+    
     let request = new XMLHttpRequest();
-    var card_entered = document.getElementById('numberEntered-el').value;
-    var date_entered = document.getElementById('expDate-el').value;
-    var cvv_entered = document.getElementById('cvv-el').value;
+    
     var vars = "numberEntered="+card_entered+"expDate="+date_entered+"cvvEntered="+cvv_entered;
     request.open('POST', 'server.php', true);
     
@@ -19,6 +20,15 @@ function ccValidation(){
     }
     request.send(vars);
 }
+
+
+
+
+
+
+
+
+
 
 // readyState Values
     // 0: request not initialized
