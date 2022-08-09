@@ -29,7 +29,7 @@
                 
                 <div class="formGroup">
                     <p class="cardNumberP">Card Number </p><label id="validate" class="cardOutput"></label>
-                    <input type="text" minlength="14" maxlength="16" onkeypress="ccValidation();" name="numberEntered" class="cardNumberInput"
+                    <input type="text" minlength="14" maxlength="16" onkeydown="checker();" name="numberEntered" class="cardNumberInput"
                     placeholder="e.g. 1234 5678 9123 0000" id="numberEntered-el" required >
                     
                     

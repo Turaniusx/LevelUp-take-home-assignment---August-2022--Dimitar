@@ -1,12 +1,10 @@
 var card_entered = document.getElementById('numberEntered-el').value;
-var date_entered = document.getElementById('expDate-el').value;
-var cvv_entered = document.getElementById('cvv-el').value;
 
-function ccValidation(){
+
+function checker(){
     
     let request = new XMLHttpRequest();
     
-    var vars = "numberEntered="+card_entered+"expDate="+date_entered+"cvvEntered="+cvv_entered;
     request.open('POST', 'server.php', true);
     
     request.onreadystatechange = function() {
@@ -18,7 +16,7 @@ function ccValidation(){
             output += "&#10060;";
         }
     }
-    request.send(vars);
+    request.send();
 }
 
 
