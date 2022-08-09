@@ -5,13 +5,17 @@ function checker(){
     
     let request = new XMLHttpRequest();
     
-    request.open('POST', 'server.php', true);
+    request.open('GET', 'index.php', true);
     
     request.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200){
-            var output = this.responseText;
-            output += "&#10004;&#65039;"
-            document.getElementById('validate').innerHTML = output;
+            card_entered = new RegExp('/^4[0-9]{12}(?:[0-9]{3})?$/')
+            if (match(card_entered) == true) {
+                var output = this.responseText;
+                output += "&#10004;&#65039;"
+                document.getElementById('validate').innerHTML = output;
+            }
+            
         } else {
             output += "&#10060;";
         }
